@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<bean id="custObj" class="com.spring.app.Customer">
+		<property name="custId" value="1"></property>
+		<property name="custName" value="Shubham" />
+		<property name="emailId" value="shubham@gmail.com" />
+		<property name="contactNo" value="9458708076" />
+	</bean>
+
+	<bean id="memberShipObj" class="com.spring.app.MemberShip">
+
+		<constructor-arg value="1" type="int" index="0" />
+		<constructor-arg value="gold" index="1" />
+		<constructor-arg value="45" type="int" index="2" />
+		<constructor-arg ref="custObj" index="3" />
+	</bean>
+
+
+</beans>  	    	    	     
